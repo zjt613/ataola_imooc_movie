@@ -1,0 +1,16 @@
+{
+  "name": "ataola_imooc_movie",
+  "version": "1.0.0",
+  "description": "To Study Node.JS and mongoDB,just a movie website with the help of the teacher who named scott 's educational videos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zheng JiangTao",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "mongoose": "^5.2.6"
+  }
+}
