@@ -50,4 +50,46 @@ html
    });
 ```
 效果如下：:point_down:
+
 ![路由测试](./public/images/viewroute.png)
+
+### 伪造页面数据测试jade渲染的前端模板
+*这里的数据并不是按照老师教程事先准备好的，而是去豆瓣抓取的，谈起为什么这么做，因为什么事都不可能凑的那么好，我们学技术就应该应用到生活实战里去*
+
+结果可想而知，因为豆瓣的图片事webp格式的，而且每张图片的大小略微有点不一样，而bootstrap布局又是写死的，这就会对页面造成布局破坏
+下面看下凉凉的效果 :joy:
+
+这个是凉凉版的首页 :broken_heart:
+
+![首页错误](./public/images/badindex.png)
+
+凉凉版的详细页 :broken_heart:
+
+![详细页错误](./public/images/baddetail.png)
+
+但神奇的是，当你F12看下移动端的效果时，天啦噜，居然还较为满意的 :innocent:
+
+![mobie](./public/images/iphoneXmobieindex.png)
+
+**结果分析** 产生这个现象的原因时Bootstrap3（我们这里开发时3的版本，默认bower不指定都是最新的4这里注意下）
+Bootstrap内部是12栅格系统，scott老师视频中是给div的class设置col-md-2,这样的话我们可以想象，一行中可以排列六张图，若图片的宽高超过div父元素必天下打乱，
+第二个是为什么也不尽人意，按照col-md 5+7刚好是12啊，原因是因为给swf视频设置的宽高超过了div，设置小点就好。
+
+正确的打开姿势是首页设置成功col-md-4，即每行三个，如图：
+
+![正确的首页](./public/images/indexpageokone.png)
+
+详细页视图：
+
+![详细页](./public/images/detailpageone.png)
+
+数据插入页效果：
+
+![数据插入](./public/images/adminmovie.png)
+
+好啦，至此模拟假数据仿真的页面完成了 :satisfied:
+
+
+
+
+
