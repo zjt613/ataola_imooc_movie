@@ -103,9 +103,9 @@ Bootstrap内部是12栅格系统，scott老师视频中是给div的class设置co
 因为昨天又去重温了一遍《无间道》，里面的台词还是那么经典，那么耐人寻味，所以就用它来测试吧，
 先放一张影帝大大的照片镇楼
 
-![梁朝伟](http://s15.sinaimg.cn/mw690/a511a7adgd1c3ab9bf4ce&690)
+![梁朝伟](./public/images/lcw.jpg)
 
-我们先打开录入页，也就是http://localhost:/movie/new
+我们先打开录入页，也就是http://localhost/movie/new
 
 ![录入页](./public/images/sql1.png)
 
