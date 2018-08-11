@@ -89,6 +89,45 @@ Bootstrap内部是12栅格系统，scott老师视频中是给div的class设置co
 
 好啦，至此模拟假数据仿真的页面完成了 :satisfied:
 
+### 关于mongodb数据库操作
+
+**整体思路:** 这里我们用的是mongoose， 通过Schema定义模式，然后通过model来
+编译模型，最后通过Document进行文档实例化来对mongodb进行数据库操作
+
+这里mongoose的数据库的连接时这样子的：
+```
+    var mongoose=require('mongoose');
+    mongoose.connect('mongodb://localhost/ataola_imooc_movie');
+```
+
+因为昨天又去重温了一遍《无间道》，里面的台词还是那么经典，那么耐人寻味，所以就用它来测试吧，
+先放一张影帝大大的照片镇楼
+
+![梁朝伟](http://s15.sinaimg.cn/mw690/a511a7adgd1c3ab9bf4ce&690)
+
+我们先打开录入页，也就是http://localhost:/movie/new
+
+![录入页](./public/images/sql1.png)
+
+点击录入后，我们可以看到mongodb数据库里的结果
+
+![mongodb结果](./public/images/sql3.png)
+
+它会重定向到详情页
+
+![详情页](./public/images/sql2.png)
+
+然后我们进入列表页看下，发现多了条结果
+
+![列表页](./public/images/sqllist.png)
+
+我们点击更新跳到更新页，我们把它改成2003年大陆上映的中文版
+
+![更新](./public/images/sqlupdate.png)
+
+最后我们看到结果时改变了
+
+![结果](./public/images/sqlupdateafter.png)
 
 
 
