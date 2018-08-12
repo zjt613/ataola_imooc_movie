@@ -105,7 +105,7 @@ Bootstrap内部是12栅格系统，scott老师视频中是给div的class设置co
 
 ![梁朝伟](./public/images/lcw.jpg)
 
-我们先打开录入页，也就是http://localhost/movie/new
+我们先打开录入页，也就是http://localhost:3000/movie/new
 
 ![录入页](./public/images/sql1.png)
 
@@ -128,6 +128,29 @@ Bootstrap内部是12栅格系统，scott老师视频中是给div的class设置co
 最后我们看到结果时改变了
 
 ![结果](./public/images/sqlupdateafter.png)
+
+关于列表页数据的删除
+
+首先我们思考一个问题，把bower管理的包库写在bower_components里，当我要写自己的逻辑的时候
+js引入有点烦，所有我们新建一个.bowerrc文件里面的directory参数来安装库文件这里是public文件夹下的libs
+然后我们需要再app.js入口文件的静态文件改下，然后在head.jade和list.jade改下引入路径，这里注意你在list.jade
+引入自己的js，先回车另起一行然后空四格，自己写好后，然后再app.js里写删除的路由。
+
+下面是删除测试用例结果：
+
+![deletelist](./public/images/listdelete.png)
+
+至此慕课一期项目已经完毕，我们知道路漫漫其修远兮，还有权限控制以及一些细节还需要细化，敬请期待更新吧！
+
+**如何运行这个项目：**
+
+第一步：git clone https://github.com/zjt613/ataola_imooc_movie.git
+
+第二步：bower install && npm install 
+
+第三步：打开浏览器喽
+
+谢谢观赏 :blush:
 
 
 
